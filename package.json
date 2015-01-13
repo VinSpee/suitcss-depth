@@ -1,7 +1,7 @@
 {
   "name": "suitcss-depth",
   "description": "Assign depths based on Google's Material Design",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "style": "index.css",
   "files": [
     "index.css",
