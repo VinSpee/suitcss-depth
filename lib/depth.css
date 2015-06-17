@@ -3,12 +3,18 @@
  * different depths
  */
 
+:root {
+  --depth-color: #000000;
+}
+
 .u-depth {
   position: relative;
   z-index: 1;
+  border-radius: inherit;
 }
 
 .u-depth:before, .u-depth:after {
+  border-radius: inherit;
   z-index: -1;
   position: absolute;
   content: '';
@@ -26,12 +32,12 @@
 
 .u-depth0:before {
   opacity: 0;
-  box-shadow: 0px 0px 0px black, 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent;
+  box-shadow: 0 0 0 var(--depth-color), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
 }
 
 .u-depth0:after {
   opacity: 0;
-  box-shadow: 0px 0px 0px black, 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent, 0px 0px 0px transparent;
+  box-shadow: 0 0 0 var(--depth-color), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
 }
 .u-depth0:before, .u-depth0:after {
   transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
@@ -42,11 +48,11 @@
 }
 .u-depth1:before {
   opacity: 0.12;
-  box-shadow: 0px 1px 10px black, 0px 3px 15px transparent, 0px 10px 40px transparent, 0px 14px 50px transparent, 0px 19px 70px transparent;
+  box-shadow: 0 1px 10 var(--depth-color), 0 3px 15px transparent, 0 10 40 transparent, 0 14px 50 transparent, 0 19px 70 transparent;
 }
 .u-depth1:after {
   opacity: 0.24;
-  box-shadow: 0px 1px 1px black, 0px 3px 3px transparent, 0px 6px 3px transparent, 0px 10px 5px transparent, 0px 15px 6px transparent;
+  box-shadow: 0 1px 1px var(--depth-color), 0 3px 3px transparent, 0 6px 3px transparent, 0 10 5px transparent, 0 15px 6px transparent;
 }
 
 .u-depth2:before, .u-depth2:after {
@@ -54,11 +60,11 @@
 }
 .u-depth2:before {
   opacity: 0.16;
-  box-shadow: 0px 1px 10px transparent, 0px 3px 15px black, 0px 10px 40px transparent, 0px 14px 50px transparent, 0px 19px 70px transparent;
+  box-shadow: 0 1px 10 transparent, 0 3px 15px var(--depth-color), 0 10 40 transparent, 0 14px 50 transparent, 0 19px 70 transparent;
 }
 .u-depth2:after {
   opacity: 0.23;
-  box-shadow: 0px 1px 1px transparent, 0px 3px 3px black, 0px 6px 3px transparent, 0px 10px 5px transparent, 0px 15px 6px transparent;
+  box-shadow: 0 1px 1px transparent, 0 3px 3px var(--depth-color), 0 6px 3px transparent, 0 10 5px transparent, 0 15px 6px transparent;
 }
 
 .u-depth3:before, .u-depth3:after {
@@ -66,11 +72,11 @@
 }
 .u-depth3:before {
   opacity: 0.19;
-  box-shadow: 0px 1px 10px transparent, 0px 3px 15px transparent, 0px 10px 40px black, 0px 14px 50px transparent, 0px 19px 70px transparent;
+  box-shadow: 0 1px 10 transparent, 0 3px 15px transparent, 0 10 40 var(--depth-color), 0 14px 50 transparent, 0 19px 70 transparent;
 }
 .u-depth3:after {
   opacity: 0.23;
-  box-shadow: 0px 1px 1px transparent, 0px 3px 3px transparent, 0px 6px 3px black, 0px 10px 5px transparent, 0px 15px 6px transparent;
+  box-shadow: 0 1px 1px transparent, 0 3px 3px transparent, 0 6px 3px var(--depth-color), 0 10 5px transparent, 0 15px 6px transparent;
 }
 
 .u-depth4:before, .u-depth4:after {
@@ -78,11 +84,11 @@
 }
 .u-depth4:before {
   opacity: 0.25;
-  box-shadow: 0px 1px 10px transparent, 0px 3px 15px transparent, 0px 10px 40px transparent, 0px 14px 50px black, 0px 19px 70px transparent;
+  box-shadow: 0 1px 10 transparent, 0 3px 15px transparent, 0 10 40 transparent, 0 14px 50 var(--depth-color), 0 19px 70 transparent;
 }
 .u-depth4:after {
   opacity: 0.22;
-  box-shadow: 0px 1px 1px transparent, 0px 3px 3px transparent, 0px 6px 3px transparent, 0px 10px 5px black, 0px 15px 6px transparent;
+  box-shadow: 0 1px 1px transparent, 0 3px 3px transparent, 0 6px 3px transparent, 0 10 5px var(--depth-color), 0 15px 6px transparent;
 }
 
 .u-depth5:before, .u-depth5:after {
@@ -90,9 +96,9 @@
 }
 .u-depth5:before {
   opacity: 0.30;
-  box-shadow: 0px 1px 10px transparent, 0px 3px 15px transparent, 0px 10px 40px transparent, 0px 14px 50px transparent, 0px 19px 70px black;
+  box-shadow: 0 1px 10 transparent, 0 3px 15px transparent, 0 10 40 transparent, 0 14px 50 transparent, 0 19px 70 var(--depth-color);
 }
 .u-depth5:after {
   opacity: 0.22;
-  box-shadow: 0px 1px 1px transparent, 0px 3px 3px transparent, 0px 6px 3px transparent, 0px 10px 5px transparent, 0px 15px 6px black;
+  box-shadow: 0 1px 1px transparent, 0 3px 3px transparent, 0 6px 3px transparent, 0 10 5px transparent, 0 15px 6px var(--depth-color);
 }
